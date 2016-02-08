@@ -78,6 +78,8 @@ header {
 .close-btn{
   margin-left: 1em;
 }
+
+
 /*
  *Sliding Navigation
  */
@@ -125,7 +127,29 @@ header {
   .close-btn{
     display: none;
   }
+  .navigation ul{
+  padding: 0;
+  li{
+    display: inline-block;
+    a{
+      border-top: 1px solid $light-grey;
+    }
+  }
 
+  a{
+    display: block;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid $light-grey;
+    text-decoration: none;
+    color: $text-color;
+    text-align: center;
+  }
+}
+
+
+.navigation li{
+
+}
 }
 
 // Show navigation on screen when there is no JS

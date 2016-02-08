@@ -148,6 +148,23 @@ header {
   .close-btn {
     display: none;
   }
+  .navigation ul {
+    padding: 0;
+  }
+  .navigation ul li {
+    display: inline-block;
+  }
+  .navigation ul li a {
+    border-top: 1px solid #ccc;
+  }
+  .navigation ul a {
+    display: block;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    color: #222;
+    text-align: center;
+  }
 }
 
 body.noscript .navigation {
