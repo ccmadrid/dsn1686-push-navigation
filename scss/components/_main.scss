@@ -48,8 +48,10 @@ header {
 
 .navigation ul{
   padding: 0;
+
   li{
     list-style-type: none;
+    background-color: white;
   }
 
   a{
@@ -69,15 +71,15 @@ header {
   }
 
   .subsites{
-    background-color: white;
     max-height: 0;
     // overflow: hidden;
     a{
+
       color: $light-pink;
       &:hover{
       background-color: $light-pink;
       color: white;
-      background-color: white;
+
       }
     }
   }
@@ -210,7 +212,12 @@ header {
     padding-left: 2em;
     top: 3em;
     right: 0;
-    text-align: right;;
+    text-align: right;
+    backgroun-color: white;
+    a{
+      width: 15em;
+      text-align: right;
+    }
   }
 
 }
