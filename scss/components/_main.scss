@@ -18,7 +18,7 @@ html {
 
 
 body{
-  font-family: sans-serif;
+  font-family: "Muli";
   @include zero;
   // Hides close button if there is no js
   &.noscript .close-btn,
@@ -33,6 +33,10 @@ header {
   position: relative;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 .toggle-btn{
   position: absolute;
   right: 1em;
@@ -43,24 +47,33 @@ header {
   padding: 0;
   li{
     list-style-type: none;
-    &:first-child a{
-    border-top: 1px solid $light-grey;
-    }
   }
 
   a{
     display: block;
     padding: 0.5em 1em;
-    border-bottom: 1px solid $light-grey;
     text-decoration: none;
     color: $text-color;
     text-align: center;
     &:focus{
-      background-color: $af;
+      background-color: $light-pink;
       color: #fff;
     }
     &:hover{
-      background-color: lighten($af, 20%);
+      background-color: $light-pink;
+      color: white;
+    }
+  }
+
+  .subsites{
+    max-height: 0;
+    // overflow: hidden;
+    a{
+      color: $light-pink;
+      &:hover{
+      background-color: $light-pink;
+      color: white;
+      }
     }
   }
 }
@@ -72,7 +85,6 @@ header {
   height: 40px;
   width: 40px;
   &:before{
-    border: 1px solid $light-grey;
     display: inline-block;
     padding: 13px 11px;
     height: 40px;
@@ -131,6 +143,7 @@ header {
       padding: 0;
       min-height: 800px;
     }
+
 }
 //max-width mediaquery
 
@@ -138,16 +151,24 @@ header {
 @media only screen and (min-width: 38em){
   .site-wrapper{
     &[data-state="slide-open"] .sliding-canvas{
-      transform: translateX(-33%);
+      transform: translateX(-50%);
     }
   }
   .navigation ul{
     li{
       a{
         text-align: left;
+        padding-left: 2em;
       }
     }
+    .subsites{
+    // display: block;
+    padding-left: 2em;
+    top: 3em;
+    right: 0;
   }
+  }
+
 }
 @media only screen and (min-width: 60em){
   .toggle-btn,
@@ -155,7 +176,7 @@ header {
     display: none;
   }
 
-  .sitewrapper{
+  .site-wrapper{
     &[data-state="slide-open"] .sliding-canvas{
       transform: translateX(0%);
     }
@@ -169,19 +190,24 @@ header {
   li{
     display: inline-block;
     a{
-      border-top: 1px solid $light-grey;
       display: block;
       padding: 0.5em 1em;
-      border-bottom: 1px solid $light-grey;
       text-decoration: none;
       color: $text-color;
       text-align: center;
     }
   }
-
-  a{
-
+.subsite-parent{
+  position: relative;
+}
+.subsites{
+    // display: block;
+    padding-left: 2em;
+    top: 3em;
+    right: 0;
+    text-align: right;;
   }
+
 }
 
 

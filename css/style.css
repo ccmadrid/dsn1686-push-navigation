@@ -36,7 +36,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Muli";
   margin: 0;
   padding: 0;
   position: relative;
@@ -50,6 +50,10 @@ body.noscript .toggle-btn {
 header {
   padding: 0 1em;
   position: relative;
+}
+
+.hidden {
+  overflow: hidden;
 }
 
 .toggle-btn {
@@ -66,26 +70,35 @@ header {
   list-style-type: none;
 }
 
-.navigation ul li:first-child a {
-  border-top: 1px solid #ccc;
-}
-
 .navigation ul a {
   display: block;
   padding: 0.5em 1em;
-  border-bottom: 1px solid #ccc;
   text-decoration: none;
   color: #eb6852;
   text-align: center;
 }
 
 .navigation ul a:focus {
-  background-color: #afafaf;
+  background-color: #f8ccc4;
   color: #fff;
 }
 
 .navigation ul a:hover {
-  background-color: #e2e2e2;
+  background-color: #f8ccc4;
+  color: white;
+}
+
+.navigation ul .subsites {
+  max-height: 0;
+}
+
+.navigation ul .subsites a {
+  color: #f8ccc4;
+}
+
+.navigation ul .subsites a:hover {
+  background-color: #f8ccc4;
+  color: white;
 }
 
 .toggle-btn,
@@ -98,7 +111,6 @@ header {
 
 .toggle-btn:before,
 .close-btn:before {
-  border: 1px solid #ccc;
   display: inline-block;
   padding: 13px 11px;
   height: 40px;
@@ -158,10 +170,16 @@ header {
 
 @media only screen and (min-width: 38em) {
   .site-wrapper[data-state="slide-open"] .sliding-canvas {
-    transform: translateX(-33%);
+    transform: translateX(-50%);
   }
   .navigation ul li a {
     text-align: left;
+    padding-left: 2em;
+  }
+  .navigation ul .subsites {
+    padding-left: 2em;
+    top: 3em;
+    right: 0;
   }
 }
 
@@ -170,7 +188,7 @@ header {
   .close-btn {
     display: none;
   }
-  .sitewrapper[data-state="slide-open"] .sliding-canvas {
+  .site-wrapper[data-state="slide-open"] .sliding-canvas {
     transform: translateX(0%);
   }
   .navigation ul {
@@ -183,13 +201,20 @@ header {
     display: inline-block;
   }
   .navigation ul li a {
-    border-top: 1px solid #ccc;
     display: block;
     padding: 0.5em 1em;
-    border-bottom: 1px solid #ccc;
     text-decoration: none;
     color: #eb6852;
     text-align: center;
+  }
+  .navigation ul .subsite-parent {
+    position: relative;
+  }
+  .navigation ul .subsites {
+    padding-left: 2em;
+    top: 3em;
+    right: 0;
+    text-align: right;
   }
 }
 
