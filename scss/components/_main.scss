@@ -12,7 +12,6 @@ html {
 	text-size-adjust: 100%;
 }
 
-
 *, *:before, *:after {
 	box-sizing: inherit;
 }
@@ -76,6 +75,9 @@ header {
   }
 }
 
+.close-btn{
+  margin-left: 1em;
+}
 /*
  *Sliding Navigation
  */
