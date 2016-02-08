@@ -39,6 +39,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 body.noscript .close-btn,
@@ -74,13 +75,22 @@ header {
   padding: 0.5em 1em;
   border-bottom: 1px solid #ccc;
   text-decoration: none;
-  color: #222;
+  color: #eb6852;
   text-align: center;
+}
+
+.navigation ul a:focus {
+  background-color: #afafaf;
+  color: #fff;
+}
+
+.navigation ul a:hover {
+  background-color: #e2e2e2;
 }
 
 .toggle-btn,
 .close-btn {
-  color: #222;
+  color: #eb6852;
   text-decoration: none;
   height: 40px;
   width: 40px;
@@ -128,10 +138,13 @@ header {
   .site-wrapper[data-state="slide-open"] .sliding-canvas {
     transform: translateX(-100%);
   }
-  .site-wrapper[data-state="slide-open"] {
+  .site-wrapper[data-state="slide-open"] .sliding-canvas .toggle-btn {
+    display: none;
+  }
+  [data-state="slide-open"] {
     overflow: visible;
   }
-  .site-wrapper .navigation {
+  .navigation {
     position: absolute;
     width: 100%;
     right: -100%;
@@ -143,26 +156,39 @@ header {
   }
 }
 
+@media only screen and (min-width: 38em) {
+  .site-wrapper[data-state="slide-open"] .sliding-canvas {
+    transform: translateX(-33%);
+  }
+  .navigation ul li a {
+    text-align: left;
+  }
+}
+
 @media only screen and (min-width: 60em) {
   .toggle-btn,
   .close-btn {
     display: none;
   }
+  .sitewrapper[data-state="slide-open"] .sliding-canvas {
+    transform: translateX(0%);
+  }
   .navigation ul {
     padding: 0;
+    position: absolute;
+    top: -1em;
+    right: 2em;
   }
   .navigation ul li {
     display: inline-block;
   }
   .navigation ul li a {
     border-top: 1px solid #ccc;
-  }
-  .navigation ul a {
     display: block;
     padding: 0.5em 1em;
     border-bottom: 1px solid #ccc;
     text-decoration: none;
-    color: #222;
+    color: #eb6852;
     text-align: center;
   }
 }
