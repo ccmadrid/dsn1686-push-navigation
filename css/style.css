@@ -47,6 +47,10 @@ body.noscript .toggle-btn {
   display: none;
 }
 
+main img {
+  width: 100%;
+}
+
 header {
   padding: 0 1em;
   position: relative;
@@ -89,6 +93,7 @@ header {
 }
 
 .navigation ul .subsites {
+  background-color: white;
   max-height: 0;
 }
 
@@ -99,6 +104,7 @@ header {
 .navigation ul .subsites a:hover {
   background-color: #f8ccc4;
   color: white;
+  background-color: white;
 }
 
 .toggle-btn,
